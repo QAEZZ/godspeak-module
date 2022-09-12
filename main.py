@@ -9,10 +9,13 @@ class god():
 
     class speak():
 
-        def __init__(self, amount: int, return_as_list: bool = True) -> "The holy words of God":
+        def __init__(self, amount: int = 0, return_as_list: bool = True) -> "The holy words of God":
             """Returns the holy word of God"""
             self.amount = amount
             self.return_as_list = return_as_list
+
+            if self.amount == 0:
+                return "amount cannot be 0!"
 
             self.run()
 
@@ -65,8 +68,3 @@ def jsonify():
     with open("./data/vocabList.json", "w") as f:
         list = listify()
         json.dump(list, f)
-
-
-# print(listify())
-# jsonify()
-god.speak(10)
