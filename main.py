@@ -17,9 +17,9 @@ class godspeak():
             return f"\"{self.return_type}\" is not a valid return type! \"list\" and \"string\" are valid return types"
         else:
             if self.return_type == "list":
-                self.return_as_list = True
+                self.return_type = True
             elif self.return_type == "string":
-                self.return_as_list = False
+                self.return_type = False
 
     def getWords(self, self.return_as_list: bool = True):
         with open("./data/vocabList.json", "r") as god:
