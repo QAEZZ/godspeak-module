@@ -45,6 +45,7 @@ class godspeak():
                 
 
     def run(self):
+        self.handleAndResolveReturnType()
         print(self.getWords(self.resturn_as_list=self.return_type))
 
 
