@@ -4,7 +4,7 @@ import json
 
 class god():
 
-    def __init__():
+    def __init__(self):
         print("ready")
     
     class speak():
