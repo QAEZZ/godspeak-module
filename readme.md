@@ -1,6 +1,6 @@
 # Godspeak Module
-a pypi module for godspeak \
-
+a pypi module for godspeak 
+---
 
 ```
 ./data/vocab.txt
