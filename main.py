@@ -2,39 +2,44 @@ import random
 import json
 
 
-class godspeak():
+class god():
 
-    def __init__(self, amount: int, return_as_list: bool = True):
-        self.amount = amount
-        self.return_as_list = return_as_list
+    def __init__():
+        print("ready")
+    
+    class speak():
 
-        print(f"ready\namount: {self.amount}")
-        self.run()
+        def __init__(self, amount: int, return_as_list: bool = True):
+            self.amount = amount
+            self.return_as_list = return_as_list
 
-    def getWords(self, return_as_list: bool = True):
-        with open("./data/vocabList.json", "r") as god:
-            data = json.load(god)
-            #print(data)
-            self.words = []
-            count = 0
-            cont = True
-            while cont is True:
-                if count < self.amount:
-                    self.words.append(data[random.randint(0, 7568)].rstrip("\n"))
-                else:
-                    cont = False
-                count += 1
+            print(f"ready\namount: {self.amount}")
+            self.run()
 
-        if return_as_list is True:
-            return self.words
-        else:
-            final = ""
-            for items in self.words:
-                final += items + " "
-            return final
+        def getWords(self, return_as_list: bool = True):
+            with open("./data/vocabList.json", "r") as god:
+                data = json.load(god)
+                #print(data)
+                self.words = []
+                count = 0
+                cont = True
+                while cont is True:
+                    if count < self.amount:
+                        self.words.append(data[random.randint(0, 7568)].rstrip("\n"))
+                    else:
+                        cont = False
+                    count += 1
 
-    def run(self):
-        print(self.getWords(self.return_as_list))
+            if return_as_list is True:
+                return self.words
+            else:
+                final = ""
+                for items in self.words:
+                    final += items + " "
+                return final
+
+        def run(self):
+            print(self.getWords(self.return_as_list))
 
 
 def listify(write_file=False):
@@ -58,4 +63,4 @@ def jsonify():
 
 # print(listify())
 # jsonify()
-godspeak(10)
+god.speak(10)
