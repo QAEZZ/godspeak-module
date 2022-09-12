@@ -18,7 +18,7 @@ class godspeak():
             cont = True
             while cont is True:
                 if count < self.amount:
-                    self.words.append(data[random.randint(0, 100)].rstrip("\n"))
+                    self.words.append(data[random.randint(0, 7568)].rstrip("\n"))
                 else:
                     cont = False
                 count += 1
@@ -29,14 +29,15 @@ class godspeak():
         print(self.getWords())
 
 
-def listify():
+def listify(write_file=False):
     with open("./data/vocab.txt", "r") as god:
         words_listed = []
         for word in god:
             words_listed.append(word.rstrip("\n"))
 
-        with open("./data/vocabList.txt", "w") as lord:
-            lord.write(str(words_listed))
+        if write_file is True:
+              with open("./data/vocabList.txt", "w") as lord:
+                  lord.write(str(words_listed))
 
     return words_listed
 
