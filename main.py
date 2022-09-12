@@ -5,15 +5,14 @@ import json
 class god():
 
     def __init__(self):
-        print("ready")
-    
+        print("available commands:\n\ngod.speak()\ngod.quote()\n")
+
     class speak():
 
         def __init__(self, amount: int, return_as_list: bool = True):
             self.amount = amount
             self.return_as_list = return_as_list
 
-            print(f"ready\namount: {self.amount}")
             self.run()
 
         def getWords(self, return_as_list: bool = True):
@@ -25,7 +24,8 @@ class god():
                 cont = True
                 while cont is True:
                     if count < self.amount:
-                        self.words.append(data[random.randint(0, 7568)].rstrip("\n"))
+                        self.words.append(data[random.randint(
+                            0, 7568)].rstrip("\n"))
                     else:
                         cont = False
                     count += 1
@@ -41,6 +41,11 @@ class god():
         def run(self):
             print(self.getWords(self.return_as_list))
 
+    class quote():
+
+        def __init__(self):
+            print("Soon(TM)")
+
 
 def listify(write_file=False):
     with open("./data/vocab.txt", "r") as god:
@@ -49,8 +54,8 @@ def listify(write_file=False):
             words_listed.append(word.rstrip("\n"))
 
         if write_file is True:
-              with open("./data/vocabList.txt", "w") as lord:
-                  lord.write(str(words_listed))
+            with open("./data/vocabList.txt", "w") as lord:
+                lord.write(str(words_listed))
 
     return words_listed
 
