@@ -4,24 +4,14 @@ import json
 
 class godspeak():
 
-    def __init__(self, amount: int, return_type: str = "list"):
+    def __init__(self, amount: int, return_as_list: bool = True):
         self.amount = amount
-        self.return_type = return_type
         self.return_as_list = return_as_list
 
         print(f"ready\namount: {self.amount}")
         self.run()
-    
-    def handleAndResolveReturnType(self, self.return_type):
-        if self.return_type != "list" or "string":
-            return f"\"{self.return_type}\" is not a valid return type! \"list\" and \"string\" are valid return types"
-        else:
-            if self.return_type == "list":
-                self.return_type = True
-            elif self.return_type == "string":
-                self.return_type = False
 
-    def getWords(self, self.return_as_list: bool = True):
+    def getWords(self, return_as_list: bool = True):
         with open("./data/vocabList.json", "r") as god:
             data = json.load(god)
             #print(data)
@@ -44,8 +34,7 @@ class godspeak():
             return final
 
     def run(self):
-        self.handleAndResolveReturnType()
-        print(self.getWords(self.return_as_list=self.return_type))
+        print(self.getWords(self.return_as_list))
 
 
 def listify(write_file=False):
