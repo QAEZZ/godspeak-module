@@ -9,7 +9,8 @@ class god():
 
     class speak():
 
-        def __init__(self, amount: int, return_as_list: bool = True):
+        def __init__(self, amount: int, return_as_list: bool = True) -> "The holy words of God":
+            """Returns the holy word of God"""
             self.amount = amount
             self.return_as_list = return_as_list
 
