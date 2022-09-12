@@ -42,11 +42,10 @@ class godspeak():
             for items in self.words:
                 final += items + " "
             return final
-                
 
     def run(self):
         self.handleAndResolveReturnType()
-        print(self.getWords(self.resturn_as_list=self.return_type))
+        print(self.getWords(self.return_as_list=self.return_type))
 
 
 def listify(write_file=False):
