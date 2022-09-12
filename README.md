@@ -9,4 +9,5 @@ is from <a href="https://github.com/The-Holy-Church-of-Terry-Davis/GodSpeak-Twit
 
 ```python
 from godspeak import god
+god.speak(10)
 ```
