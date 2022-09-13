@@ -1,4 +1,4 @@
-# Godspeak Module
+# Godspeak Module (NOT DONE)
 a pypi module for godspeak 
 ---
 
