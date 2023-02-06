@@ -1,5 +1,7 @@
 # Godspeak Module (NOT DONE)
 a pypi module for godspeak 
+
+(I dont know how to use classes)
 ---
 
 
