@@ -2,11 +2,6 @@ import random
 
 
 class god():
-    def __str__(self):
-        return ""
-
-    def __repr__(self):
-        return ""
 
     class speak():
 
